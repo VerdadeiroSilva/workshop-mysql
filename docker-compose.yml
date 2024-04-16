@@ -1,0 +1,11 @@
+services:
+  mysql:
+    container_name: mysql-workbench
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: employees_database
+    ports:
+      - "3306:3306"
